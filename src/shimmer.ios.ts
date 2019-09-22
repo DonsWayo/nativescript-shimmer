@@ -1,18 +1,18 @@
-import { Shimmer as ShimmerBase, enabledProperty } from './shimmer.common';
+import {enabledProperty, Shimmer as ShimmerBase} from './shimmer.common';
 
 declare var FBShimmeringView, CGRectMake;
 
 export class Shimmer extends ShimmerBase {
 
-  createNativeView(): any {
-    return FBShimmeringView.alloc().initWithFrame(CGRectMake(0, 0, 0, 0));
-  }
+    createNativeView(): any {
+        return FBShimmeringView.alloc().initWithFrame(CGRectMake(0, 0, 0, 0));
+    }
 
-  initNativeView() {
-    this.nativeView.contentView = this.content.ios;
-  }
+    initNativeView() {
+        this.nativeView.contentView = this.content.ios;
+    }
 
-  [enabledProperty.setNative](value: boolean) {
-    this.nativeView.shimmering = value;
-  }
+    [enabledProperty.setNative](value: boolean) {
+        this.nativeView.shimmering = value;
+    }
 }
