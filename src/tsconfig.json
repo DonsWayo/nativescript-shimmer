@@ -2,27 +2,26 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "removeComments": true,
-    "experimentalDecorators": true,
-    "noEmitHelpers": true,
     "declaration": true,
-    "noEmitOnError": true,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "skipLibCheck": true,
-    "lib": [
-      "es2017",
-      "dom"
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "./node_modules/tns-core-modules/*",
-        "./node_modules/*"
-      ]
-    }
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "pretty": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noEmitHelpers": true,
+    "noEmitOnError": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": false,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "shimmer.android.ts",
-    "shimmer.ios.ts"
+  "exclude": [
+    "node_modules"
   ],
   "compileOnSave": false
 }

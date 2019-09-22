@@ -22,3 +22,4 @@ demo-ng/platforms
 demo-ng/node_modules
 node_modules
 package-lock.json
+/publish/package/

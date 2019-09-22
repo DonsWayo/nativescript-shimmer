@@ -1,13 +1,19 @@
 {
   "name": "nativescript-shimmer-enduco",
-  "version": "2.0.2",
+  "version": "2.0.6",
   "description": "Facebook shimmer effect for your NativeScript app - iOS and Android.",
-  "main": "shimmer.js",
+  "main": "shimmer",
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
       "android": "6.0.0",
-      "ios": "6.0.0"
+      "ios": "6.0.1"
+    },
+    "plugin": {
+      "nan": true,
+      "pan": true,
+      "core3": "true",
+      "category": "Interface"
     }
   },
   "repository": {
@@ -33,24 +39,28 @@
   "homepage": "https://github.com/enduco/nativescript-shimmer",
   "readmeFilename": "README.md",
   "scripts": {
-    "tsc": "tsc -skipLibCheck",
-    "build": "npm i && tsc",
-    "plugin.link": "npm link && cd ../demo && npm link nativescript-shimmer && cd ../src",
-    "plugin.tscwatch": "npm run tsc -- -w",
+    "tsc": "npm i && tsc",
+    "build": "npm run tsc && npm run build.native",
+    "build.native": "node scripts/build-native.js",
+    "postclone": "npm i && node scripts/postclone.js",
+    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
+    "prepack": "npm run build.native",
     "demo.build": "npm i && npm run tsc",
     "demo.ios": "npm run demo.build && cd ../demo && tns run ios --emulator --syncAllFiles",
     "demo-ng.ios": "npm run demo.build && cd ../demo-ng && tns run ios --emulator --syncAllFiles",
     "demo.android": "npm run demo.build && cd ../demo && tns run android --emulator  --syncAllFiles",
     "demo-ng.android": "npm run demo.build && cd ../demo-ng && tns run android --emulator  --syncAllFiles",
-    "demo.reset": "rimraf demo/hooks demo/node_modules demo/platforms demo-ng/hooks demo-ng/node_modules demo-ng/platforms",
-    "plugin.prepare": "npm run tsc && cd ../demo && tns plugin remove nativescript-shimmer && tns plugin add ../src",
-    "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link"
+    "demo.reset": "rimraf demo/hooks demo/node_modules demo/platforms demo-ng/hooks demo-ng/node_modules demo-ng/platforms"
   },
   "devDependencies": {
+    "tns-core-modules": "^6.0.0",
+    "tns-platform-declarations": "^6.0.0",
+    "typescript": "~3.4.5",
     "prompt": "^1.0.0",
-    "rimraf": "^3.0.0",
-    "tns-core-modules": "~6.1.1",
-    "tns-platform-declarations": "~6.1.1",
-    "typescript": "^3.6.3"
-  }
+    "rimraf": "^2.6.3",
+    "tslint": "^5.12.1",
+    "semver": "^5.6.0"
+  },
+  "dependencies": {}
 }

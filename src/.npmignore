@@ -1,6 +1,10 @@
-demo/
-*.png
-*.log
 *.map
 *.ts
-!index.d.ts
+!*.d.ts
+tsconfig.json
+scripts/*
+platforms/android/*
+!platforms/android/include.gradle
+!platforms/android/*.aar
+!platforms/android/*.jar
+.DS_Store
