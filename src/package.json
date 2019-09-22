@@ -1,18 +1,18 @@
 {
-  "name": "nativescript-shimmer",
+  "name": "nativescript-shimmer-enduco",
   "version": "2.0.0",
   "description": "Facebook shimmer effect for your NativeScript app - iOS and Android.",
   "main": "shimmer.js",
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
-      "android": "3.0.0",
-      "ios": "3.0.0"
+      "android": "6.0.0",
+      "ios": "6.0.0"
     }
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NathanWalker/nativescript-shimmer.git"
+    "url": "https://github.com/enduco/nativescript-shimmer.git"
   },
   "keywords": [
     "NativeScript",
@@ -24,17 +24,13 @@
     "Effects"
   ],
   "author": {
-    "name": "Nathan Walker",
-    "email": "walkerrunpdx@gmail.com"
+    "name": "enduco",
+    "email": "ir@enduco.app"
   },
   "bugs": {
-    "url": "https://github.com/NathanWalker/nativescript-shimmer/issues"
+    "url": "https://github.com/enduco/nativescript-shimmer/issues"
   },
-  "license": {
-    "type": "BSD",
-    "url": "https://github.com/NathanWalker/nativescript-shimmer/blob/master/LICENSE"
-  },
-  "homepage": "https://github.com/NathanWalker/nativescript-shimmer",
+  "homepage": "https://github.com/enduco/nativescript-shimmer",
   "readmeFilename": "README.md",
   "scripts": {
     "tsc": "tsc -skipLibCheck",
@@ -51,10 +47,10 @@
     "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link"
   },
   "devDependencies": {
-    "tns-core-modules": "~3.3.0",
-    "tns-platform-declarations": "~3.3.0",
-    "typescript": "~2.5.3",
+    "tns-core-modules": "~6.1.1",
+    "tns-platform-declarations": "~6.1.1",
+    "typescript": "~3.6.3",
     "prompt": "^1.0.0",
-    "rimraf": "^2.5.0"
+    "rimraf": "^3.0.0"
   }
 }

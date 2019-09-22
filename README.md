@@ -7,6 +7,12 @@ Uses the following native plugins:
 * iOS: https://github.com/facebook/Shimmer
 * Android: http://facebook.github.io/shimmer-android/
 
+### Installation
+From the command prompt go to your app's root folder and execute:
+```
+tns plugin add nativescript-shimmer-enduco
+```
+
 ### Demo
 
 ![Demo](https://cdn.filestackcontent.com/PGhmVZmQqOYjv5v0OCl5?v=0)

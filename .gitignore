@@ -2,6 +2,7 @@
 *.js.map
 *.log
 *.d.ts
+.idea
 src/*.d.ts
 !src/index.d.ts
 !src/references.d.ts
