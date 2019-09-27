@@ -10,9 +10,9 @@ export class Shimmer extends ShimmerBase {
 
     [enabledProperty.setNative](value: boolean) {
         if (value) {
-            this.nativeView.startShimmerAnimation();
+            this.nativeView.startShimmer();
         } else {
-            this.nativeView.stopShimmerAnimation();
+            this.nativeView.stopShimmer();
         }
     }
 }

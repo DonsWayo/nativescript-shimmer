@@ -1,6 +1,6 @@
 {
   "name": "nativescript-shimmer-enduco",
-  "version": "2.0.6",
+  "version": "2.0.8",
   "description": "Facebook shimmer effect for your NativeScript app - iOS and Android.",
   "main": "shimmer",
   "typings": "index.d.ts",
